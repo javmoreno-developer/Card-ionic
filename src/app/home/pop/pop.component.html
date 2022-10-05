@@ -1,0 +1,13 @@
+<div id="button_container">
+  <ion-button color="favourite" id="hover-trigger">Hover Over Me</ion-button>
+  <ion-popover trigger="hover-trigger" triggerAction="hover">
+    <ng-template>
+      <ion-content class="ion-padding">{{msg}}</ion-content>
+    </ng-template>
+  </ion-popover>
+  <ion-button color="favourite" (click)="alert()">Click Me</ion-button>
+
+  <ion-item *ngFor="let item of items; trackBy : trackItems">
+    <ion-label>{{item.name}}</ion-label>
+  </ion-item>
+</div>
